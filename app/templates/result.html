@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+
+{% block page_title %}Shorten URL{% endblock page_title %}
+
+{% block head %}
+<style>
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    #result {
+        width: 400px;
+        height: 100vh;
+        padding: auto;
+        margin: auto auto;
+        text-align: center;
+        align-content: center;
+    }
+
+    #result>.container {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+
+    #result>.container>h3 {
+        font-size: xx-large;
+        padding: 15px;
+    }
+
+
+    #result>.container>.url {
+        display: flex;
+        justify-content: space-between;
+        height: 60px;
+        font-weight: 700;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        border-radius: 15px;
+        color: var(--primary);
+        justify-content: space-between;
+        background-color: rgb(35, 33, 33);
+    }
+
+    #result>.container>.url>a {
+        width: 100%;
+        text-align: center;
+        align-content: center;
+
+    }
+
+    #message {
+
+        padding: 5px;
+        color: chartreuse;
+
+        border-radius: 15px;
+        font-weight: bold;
+
+    }
+
+    button {
+        padding: 8px;
+        border-radius: 15px;
+    }
+</style>
+{% endblock head %}
+
+{% block body %}
+
+
+<div id="result">
+    <div class="container">
+        <h3>Success!</h3>
+        <div class="url">
+            <button id="btn-copy" onclick="">COPY</button>
+            <a class="url" href="{{ url_for('redirect_to_original', short_url=short_url, _external=True) }}" target="_blank">
+                {{ url_for('redirect_to_original', short_url=short_url, _external=True) }}
+            </a>
+        </div>
+        <span id="message"></span>
+    </div>
+</div>
+
+<script>
+    document
+        .getElementById("btn-copy")
+        .addEventListener("click", function (event) {
+            event.preventDefault();
+            var copyText = "{{ url_for('redirect_to_original', short_url=short_url, _external=True) }}";
+            var tempInput = document.createElement("input");
+            document.body.appendChild(tempInput);
+            tempInput.value = copyText;
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            var messageDiv = document.getElementById("message");
+            messageDiv.textContent = "Link copied to clipboard!";
+        });
+</script>
+
+{% endblock body %}

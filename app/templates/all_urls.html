@@ -1,0 +1,11 @@
+{% comment %} {% extends "base.html" %}
+
+
+{% block page_title %}All URLs{% endblock page_title %}
+
+
+{% block body %}
+
+<h1>All Shortened URLs</h1><ul> {% for url in urls %} <li>{{ url.original_url }} -> <a href="{{ url_for('redirect_to_original', short_url=url.short_url) }}">{{ url.short_url }}</a></li> {% endfor %}
+
+{% endblock body %} {% endcomment %}

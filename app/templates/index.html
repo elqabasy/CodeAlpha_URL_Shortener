@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+
+{% block page_title %}URL Shortener{% endblock page_title %}
+
+
+{% block body %}
+<h1>URL Shortener</h1>
+    <form method="POST">
+        <label for="original_url">Enter URL:</label>
+        <input type="text" id="original_url" name="original_url" required>
+        <button type="submit">Shorten</button>
+    </form>
+{% endblock body %}
