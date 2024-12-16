@@ -1,0 +1,33 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: #ece9e6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.error-container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 4em;
+    color: #ff6f61;
+}
+
+p {
+    font-size: 1.5em;
+    color: #555;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

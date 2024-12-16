@@ -1,0 +1,55 @@
+#result {
+    width: 400px;
+    height: 100vh;
+    padding: auto;
+    margin: auto auto;
+    text-align: center;
+    align-content: center;
+}
+
+#result>.container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+#result>.container>h3 {
+    font-size: xx-large;
+    padding: 15px;
+}
+
+
+#result>.container>.url {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    font-weight: 700;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    border-radius: 15px;
+    color: var(--primary);
+    justify-content: space-between;
+    background-color: rgb(35, 33, 33);
+}
+
+#result>.container>.url>a {
+    width: 100%;
+    text-align: center;
+    align-content: center;
+
+}
+
+#message {
+
+    padding: 5px;
+    color: chartreuse;
+
+    border-radius: 15px;
+    font-weight: bold;
+
+}
+
+button {
+    padding: 8px;
+    border-radius: 15px;
+}

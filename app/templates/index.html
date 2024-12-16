@@ -6,9 +6,9 @@
 
 {% block body %}
 <h1>URL Shortener</h1>
-    <form method="POST">
-        <label for="original_url">Enter URL:</label>
-        <input type="text" id="original_url" name="original_url" required>
-        <button type="submit">Shorten</button>
-    </form>
+<form method="POST">
+    <label for="original_url">Enter URL:</label>
+    <input type="text" id="original_url" name="original_url" required placeholder="ex. www.linkedin.com/in/ma7ros">
+    <button type="submit">Shorten</button>
+</form>
 {% endblock body %}
