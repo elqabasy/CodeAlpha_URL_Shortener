@@ -115,5 +115,5 @@ This project is licensed under the MIT License.
 
 If you have any suggestions or feedback, feel free to reach out:  
 
-- **LinkedIn**: [Mahros AL-Qabasy](www.linkedin.com/in/ma7ros)  
+- **LinkedIn**: [Mahros AL-Qabasy](https://www.linkedin.com/in/ma7ros)  
 - **GitHub**: [elqabasy](https://github.com/elqabasy)  
